@@ -1,0 +1,124 @@
+/* Reset and base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #faf2ff 0%, #e8c0ff 100%);
+    color: #3a2039;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #430435 30%, #470586 100%);
+    box-shadow: 0 4px 12px rgba(60, 0, 60, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+header h1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2.8rem;
+    padding: 30px 15px 20px;
+    margin: 0;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 60px auto 40px;
+    padding: 0 20px;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Season cards */
+.season-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(104, 19, 83, 0.13);
+    max-width: 340px;
+    width: 100%;
+    padding: 28px 32px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.season-card:hover,
+.season-card:focus-within {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 12px 28px rgba(99, 0, 97, 0.22);
+}
+
+.season-card h2 {
+    color: #8e24aa;
+    text-align: center;
+    margin: 0 0 20px 0;
+    text-decoration: underline wavy #8e24aa 2px;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.season-card p {
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+/* Lists inside cards */
+.season-card ul {
+    padding-left: 20px;
+    margin: 0 0 15px 0;
+    font-size: 1rem;
+}
+.season-card ul ul {
+    padding-left: 18px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+/* Strong text for emphasis */
+strong {
+    color: #af1795;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #3a2039;
+    color: #fff;
+    padding: 24px 20px;
+    font-size: 1rem;
+    margin-top: 60px;
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -5px 16px rgba(54, 53, 53, 0.15);
+}
+
+.author {
+    color: #cfff2c;
+    font-weight: bold;
+    text-decoration: underline double #cedd1b 2px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    article {
+        flex-direction: column;
+        align-items: center;
+    }
+    .season-card {
+        max-width: 96vw;
+    }
+  }
